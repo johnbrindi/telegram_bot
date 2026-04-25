@@ -1,7 +1,7 @@
 # Berlin Snoww Budd flakey Smokey — Telegram Bot
 
-> **Bot username:** `@Berlin_weedy`  
-> **Admin contact:** `@plugjameson`
+> **Bot username:** `@Berlin_weedyBot`  
+> **Admin contact:** `(temporarily removed)`
 
 ---
 
@@ -16,7 +16,7 @@ This will auto-create the bot and inject the token into `.env`.
 Or manually:  
 - Go to `@BotFather` → `/newbot`  
 - Name: `Berlin Snoww Budd flakey Smokey`  
-- Username: `Berlin_weedy` (or any available from the SEO list)  
+- Username: `Berlin_weedyBot` (or any available from the SEO list)  
 - Copy the token into `.env` as `BOT_TOKEN=`
 
 ---
@@ -40,7 +40,7 @@ Open `.env` and fill in your values:
 BOT_TOKEN=<paste your token from BotFather>
 API_ID=28472397
 API_HASH=489cb2682723fd1049541a8dd742c350
-ADMIN_URL=https://t.me/plugjameson
+ADMIN_URL=
 ```
 
 ---

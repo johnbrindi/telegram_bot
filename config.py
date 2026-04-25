@@ -20,8 +20,8 @@ API_ID: int    = int(os.getenv("API_ID", "0"))
 API_HASH: str  = os.getenv("API_HASH", "")
 
 # ── Contact & Identity ───────────────────────────────────
-ADMIN_URL: str      = os.getenv("ADMIN_URL", "https://t.me/plugjameson")
-OWNER_USERNAME: str = os.getenv("OWNER_USERNAME", "plugjameson")
+ADMIN_URL: str      = os.getenv("ADMIN_URL", "")
+OWNER_USERNAME: str = os.getenv("OWNER_USERNAME", "")
 
 # ── Webhook (optional – leave empty for long-polling) ────
 WEBHOOK_URL: str  = os.getenv("WEBHOOK_URL", "")
@@ -35,7 +35,7 @@ LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
 # 🔍 TELEGRAM BOT SEO — SAFE BRANDING STRATEGY (2026)
 #
 # Keyword strategy for maximum Telegram search ranking:
-#   1. Username @Berlin_weedy targets "Berlin", "weedy", "weed"
+#   1. Username @Berlin_weedyBot targets "Berlin", "weedy", "weed"
 #      search queries — high-intent buyers search these exact terms.
 #   2. Bot name includes lifestyle keywords: "Snoww", "Budd", "Smokey"
 #      which are organic search terms used by the target audience.

@@ -80,11 +80,19 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         logger.warning(f"⏳ Rate limited user: {user.id}")
         return
 
-    logger.info(f"📥 RECEIVED /start FROM: {user.id} (@{user.username})")
-
     if not update.message:
         logger.warning("Empty message in /start update")
         return
+
+    # ── SEO & Deep Link Tracking ────────────────────────────
+    # Extract referral code from deep link (e.g., t.me/Bot?start=ref123)
+    if context.args:
+        referral_payload = context.args[0]
+        logger.info(f"🔗 DEEP LINK HIT: User {user.id} joined via referral: {referral_payload}")
+        # Note: Here you can add Google Analytics Measurement Protocol tracking
+        # e.g., track_start_event(user.id, referral_payload)
+    else:
+        logger.info(f"📥 RECEIVED /start FROM: {user.id} (@{user.username})")
 
     # ── Admin contact is ALWAYS embedded as a URL button — never as
     #    a plain @mention — to minimise automated scan detection surface.
