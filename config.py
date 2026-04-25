@@ -85,9 +85,11 @@ def validate_config() -> None:
         missing.append("API_ID")
     if not API_HASH:
         missing.append("API_HASH")
+    if not ADMIN_URL:
+        missing.append("ADMIN_URL")
 
     if missing:
         raise EnvironmentError(
             f"Missing required environment variables: {', '.join(missing)}\n"
-            "Copy .env.example → .env and fill in the values."
+            "Please check your .env file and fill in the values."
         )
