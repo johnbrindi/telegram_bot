@@ -36,6 +36,7 @@ from handlers import (
     error_handler,
 )
 from task_manager import create_task_manager
+from keep_alive import keep_alive
 
 
 # ── Logging ───────────────────────────────────────────────
@@ -151,6 +152,9 @@ def build_application() -> Application:
 # ══════════════════════════════════════════════════════════
 
 async def main() -> None:
+    # 0. Start background web server for Render (Free Tier Hack)
+    keep_alive()
+
     # 1. Validate .env completeness
     validate_config()
 
